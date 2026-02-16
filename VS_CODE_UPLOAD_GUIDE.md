@@ -41,4 +41,3 @@ Then open: `http://localhost:8000`
 ## Notes
 - Upload buttons are intentionally disabled on the webpage.
 - Only files you add in the project folder will appear.
-- Click any image in `proof's` to expand it while the other proof images minimize, and it also opens in a fullscreen viewer.
