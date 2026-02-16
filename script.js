@@ -2,11 +2,7 @@ const mediaConfig = {
   legendPhoto:
     "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1000&q=80",
   legendAudio: "",
-  proofs: [
-    "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?auto=format&fit=crop&w=1200&q=80",
-  ],
+  proofs: [],
   audioProofs: [],
 };
 
@@ -26,34 +22,16 @@ const setLegendMedia = () => {
   }
 };
 
-const setActiveProof = (activeIndex) => {
-  const proofCards = photosGallery.querySelectorAll(".proof-card");
-  proofCards.forEach((card, index) => {
-    card.classList.toggle("is-active", index === activeIndex);
-  });
-};
-
 const renderProofs = () => {
   photosGallery.innerHTML = "";
 
   mediaConfig.proofs.forEach((path, index) => {
-    const card = document.createElement("button");
-    card.type = "button";
-    card.className = "proof-card";
-
-    const image = document.createElement("img");
-    image.alt = `proof ${index + 1}`;
-    image.src = path;
-    image.loading = "lazy";
-
-    card.append(image);
-    card.addEventListener("click", () => setActiveProof(index));
+    const card = document.createElement("img");
+    card.alt = `proof ${index + 1}`;
+    card.src = path;
+    card.loading = "lazy";
     photosGallery.append(card);
   });
-
-  if (mediaConfig.proofs.length > 0) {
-    setActiveProof(0);
-  }
 };
 
 const renderAudioProofs = () => {
