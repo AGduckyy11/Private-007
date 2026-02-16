@@ -12,6 +12,10 @@ A love-themed (black + pink) mini website for viewing screenshots and audio clip
   - `Operation anay`
   - `witness the diddy of oxf <3`
 - Upload controls are removed/locked for visitors.
+- Owner-managed media via local project folders and `script.js` config.
+
+## How to add your files
+See: `VS_CODE_UPLOAD_GUIDE.md`
 
 ## Run locally
 Open `index.html` directly in a browser, or run:
